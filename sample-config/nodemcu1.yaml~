@@ -12,25 +12,25 @@ esphome:
     - "LPS"
 
 wifi:
-  ssid: "tpxmesh"
-  password: "Qaz1@wsx"
+  ssid: "ssid"
+  password: "password"
 
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
+
   ap:
     ssid: "Nodemcu1 Fallback Hotspot"
-    password: "QAY1Gxgi2pcX"
+    password: "password"
 
 captive_portal:
 
-# Enable logging
+
 logger:
 
-# Enable Home Assistant API
+
 api:
-  password: "qwe1rty1"
+  password: "password"
 
 ota:
-  password: "qwe1rty1"
+  password: "password"
 
 i2c:
   scan: True
@@ -75,7 +75,4 @@ sensor:
     - name: "Altitude"
       unit_of_measurement: m
 
-deep_sleep:
-  run_duration: 12s
-  sleep_duration: 3min
 
