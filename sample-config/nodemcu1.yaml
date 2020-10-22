@@ -2,18 +2,18 @@ esphome:
   name: nodemcu1
   platform: ESP8266
   board: nodemcuv2
-  
+
   includes:
     - "custom_components/SI1145/SI1145.h"
     - "custom_components/LPS25H/LPS25H.h"
-    
+
   libraries:
     - "Adafruit SI1145 Library"
     - "LPS"
 
 wifi:
-  ssid: "tpxmesh"
-  password: "Qaz1@wsx"
+  ssid: "ssid"
+  password: "password"
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
@@ -27,15 +27,15 @@ logger:
 
 # Enable Home Assistant API
 api:
-  password: "qwe1rty1"
+  password: "password"
 
 ota:
-  password: "qwe1rty1"
+  password: "password"
 
 i2c:
   scan: True
   frequency: 100khz
-sensor: 
+sensor:
 
   - platform: wifi_signal
     name: "WiFi Signal"
@@ -47,8 +47,8 @@ sensor:
       auto UV_sensor = new SI1145_sensor();
       App.register_component(UV_sensor);
       return {UV_sensor->visible_sensor, UV_sensor->ir_sensor, UV_sensor->uvindex_sensor};
-      
-    
+
+
 
     sensors:
     - name: "Visible Light"
@@ -78,4 +78,3 @@ sensor:
 deep_sleep:
   run_duration: 12s
   sleep_duration: 3min
-
